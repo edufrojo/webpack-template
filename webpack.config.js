@@ -17,5 +17,22 @@ module.exports = {
         collapseWhitespace: false
       }
     })
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.ts']
+  },
+  module: {
+    rules: [
+      {                
+        test: [/.css$/],                
+        use:[                    
+         'style-loader',                  
+         'css-loader'
+        ]                
+      }
+    ]
+  }
+
 };
+
+
