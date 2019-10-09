@@ -8,7 +8,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "../dist"),
-    filename: "[name].js"
+    filename: "[name].[chunkhash].js"
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -21,7 +21,7 @@ module.exports = {
       }
     }),
     new MiniCssExtractPlugin({
-      filename: "style.css"
+      filename: "style.[chunkhash].css"
     }),
     new CopyWebpackPlugin([
       {
